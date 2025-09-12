@@ -126,4 +126,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ---
 
 ## 📜 License
-MIT License © 2025 [Your Name]
+MIT License © 2025 [Manas Kumar Maity]
