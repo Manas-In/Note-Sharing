@@ -148,6 +148,8 @@ CORS_ALLOWED_ORIGINS = [
    
 ]
 
+STATIC_ROOT = BASE_DIR/'staticfiles'
+
 
 # settings.py
 REST_FRAMEWORK = {

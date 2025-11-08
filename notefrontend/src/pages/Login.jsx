@@ -24,7 +24,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     setLoading("Loading...");
-    console.log(fromData.email, fromData.password);
+
 
     axios
       .post("http://127.0.0.1:8000/user/login/", {
@@ -35,7 +35,6 @@ const Login = () => {
         setlogin(responce.data);
         localStorage.setItem("accessTokon", responce.data.access);
         localStorage.setItem("refreshTokon", responce.data.refresh);
-        console.log("login  Succesfull");
         setIsLogin(true);
         // navigate("/notes");
         navigate("/notes", { replace: true });

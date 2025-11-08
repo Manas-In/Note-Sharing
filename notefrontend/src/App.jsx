@@ -17,22 +17,7 @@ import NoteCardCoantainer from "./components/NoteCardCoantainer";
 import LoginPages from "./pages/LoginPage";
 
 function App() {
-//   const [notes, setnotes] = useState([]);
 
-//   useEffect(() => {
-//     axios
-//       .get("http://127.0.0.1:8000/notes/")
-//       .then((res) => {
-//         setnotes(res.data.reverse());
-//       })
-//       .catch((err) => {
-//         if (err.res) {
-//           setnotes(err.res.data);
-//         } else {
-//           setnotes(err.massage);
-//         }
-//       });
-//   }, []);
 
   return (
     <>
@@ -42,14 +27,10 @@ function App() {
         <Routes>
             < Route path = '*' element = {< NotFound />}/>
           <Route path="/" element= {<PublicRoutes>< Home/></PublicRoutes>}/>
-          {/* <Route path="/" element={<Home  />} /> */}
-          {/* <Route path="/notes" element={<Notes />} /> */}
           <Route path="/NoteDetails/:slug" element={<PrivateRoutes><NoteDetails /></PrivateRoutes>} />
           <Route path="/create-note" element={<PrivateRoutes><CreateNote /></PrivateRoutes>} />
           <Route path="/update-note/:slug" element ={<PrivateRoutes><UpdateNote /></PrivateRoutes>}/>
           <Route path="/notes" element ={<PrivateRoutes><NoteCardCoantainer /></PrivateRoutes>}/>
-          {/* <Route path="/contact" element={<Contact />} />    */}
-          {/* <Route path="/search" element = {<Search/>}/> */}
           <Route path="/login" element= {<PublicRoutes>< Login/></PublicRoutes>}/>
           <Route path="/registration" element= {<PublicRoutes><Registration /></PublicRoutes>}/>
         </Routes>

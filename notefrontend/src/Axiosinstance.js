@@ -12,7 +12,6 @@ const axiosinstance = axios.create({
 
 axiosinstance.interceptors.request.use(
   function (config) {
-    console.log("Request : ", config);
     const AccessToken = localStorage.getItem("accessTokon");
 
     if (AccessToken) {

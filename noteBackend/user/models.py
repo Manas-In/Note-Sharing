@@ -1,24 +1,3 @@
-# from django.contrib.auth.models import AbstractUser
-# from django.db import models
-
-# class CustomUser(AbstractUser):
-#         # Add your custom fields here
-#         email = models.EmailField(unique=True)
-       
-       
-#         USERNAME_FIELD = 'email'
-#         REQUIRED_FIELDS = ['username']
-#         # If you want to use email as the primary identifier for login
-#         # email = models.EmailField(unique=True) 
-
-#         # REQUIRED_FIELDS = ['username', 'first_name', 'last_name'] # if you keep username
-
-
-
-
-
-
-
 
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
