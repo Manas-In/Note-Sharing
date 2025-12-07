@@ -1,11 +1,12 @@
 import os
 import dj_database_url
 
-from settings import * 
-from settings import BASE_DIR
+from .settings import *
+from .settings import BASE_DIR
 SECRET_KEY = os.environ.get('SECRET_KEY')
-ALLOWED_HOSTS = [os.environ.get('RENDER_EXTREME_HOSTNAME')]
-CSRF_TRUSTED_ORIGINS = ['https//'+os.environ.get+['RENDER_EXTREME_HOSTNAME']]
+ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
+CSRF_TRUSTED_ORIGINS = ['https//'+os.environ.get+['RENDER_EXTERNAL_HOSTNAME']]
+
 
 DEBUG = False
 MIDDLEWARE = [
@@ -37,7 +38,12 @@ STORAGES = {
 
 DATABASES = {
     'default': dj_database_url.config(
-        default= os.environ['DATABASE_URL'], 
+        default= os.environ.get("DATABASE_URL"), 
         conn_max_age=600
     )
 }
+
+
+import os
+if os.environ.get("RENDER"):
+    from .deployment_settings import *

@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.staticfiles',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    
 ]
 
 EXTERNAL_APPS = [
@@ -194,3 +195,9 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),      # default 1 day
 
 }
+
+
+import os
+
+if os.environ.get("RENDER"):
+    from .deployment_settings import *

@@ -1,6 +1,6 @@
 set -o errexit
 
-pip install -r requirements.txt
+pip install -r noteBackend/requirements.txt
 
 python ./noteBackend/manage.py collectstatic --no-input
 
