@@ -1,1 +1,1 @@
--r backend/requirements.txt
+-r noteBackend/requirements.txt
