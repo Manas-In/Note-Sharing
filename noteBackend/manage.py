@@ -3,10 +3,9 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
-    settings_module = 'noteBackend.deployment_settings' if 'RENDER_EXTERNAL_HOSTNAME' in os.environ else 'noteBackend.settings'
+    settings_module = 'backend.deployment_settings' if 'RENDER_EXTERNAL_HOSTNAME' in os.environ else 'backend.settings'
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
     try:
         from django.core.management import execute_from_command_line
