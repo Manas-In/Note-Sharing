@@ -46,6 +46,3 @@ DATABASES = {
 }
 
 
-import os
-if os.environ.get("RENDER"):
-    from .deployment_settings import *
