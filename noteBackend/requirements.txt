@@ -2,6 +2,7 @@ asgiref==3.9.1
 click==8.3.0
 colorama==0.4.6
 dj-database-url==3.0.1
+whitenoise==6.6.0
 Django==5.2.5
 django-cors-headers==4.7.0
 django-filter==25.1
