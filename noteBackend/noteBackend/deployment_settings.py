@@ -5,7 +5,9 @@ from .settings import *
 from .settings import BASE_DIR
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
-CSRF_TRUSTED_ORIGINS = ['https//'+os.environ.get+['RENDER_EXTERNAL_HOSTNAME']]
+CSRF_TRUSTED_ORIGINS = [
+    "https://" + os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+]
 
 
 DEBUG = False
