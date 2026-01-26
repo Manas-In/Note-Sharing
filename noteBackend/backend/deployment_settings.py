@@ -1,3 +1,6 @@
+print("🚨 USING deployment_settings.py")
+
+
 import os
 import dj_database_url
 
@@ -23,9 +26,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS_AllOWED_ORIGINS = [
-    
-# ]
+CORS_AllOWED_ORIGINS = [
+    "https://notes-0dsx.onrender.com"
+]
 
 STORAGES = {
     "default":{
